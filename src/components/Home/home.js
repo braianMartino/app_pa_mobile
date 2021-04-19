@@ -40,7 +40,7 @@ class Home extends React.Component {
         >
           Volver
         <//>`
-      : null;
+      : html `<img src="/img/logo.png" style=${{marginTop:"5px", paddingLeft:"5px"}}  height="30" alt=""></img>`;
     return html`<${Ons.Toolbar} style=${{backgroundColor: "gray"}}>
       <div className="left">${backButton}</div>
       <div className="center">${route.title}</div>

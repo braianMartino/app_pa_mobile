@@ -22,13 +22,13 @@ class Charla extends React.Component {
     const res = leerTextos(this.props.idCharla)
       .then((txt) => txt.json())
       .then((txt) => this.setState({ textos: txt.textos }));
-    //DBG:console.log(this.props.charlas);
+    //DBG:console.log(this.props.idCharla);
   }
 
   render() {
     return html`
       <${Ons.Page} style=${{ display: "inline" }}>
-        <${Ons.List} style=${{ marginTop: "3em" }}>
+        <${Ons.List}>
           ${this.state.textos.map(
             ( //TODO: gusanito cuando esta cargando las charlas
               txt

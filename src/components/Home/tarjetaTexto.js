@@ -7,7 +7,6 @@ class TarjetaTexto extends React.Component {
     this.state = { texto: this.props.textoCharla , textLinks: ''};
   }
 
-
   hashtagsALinks() { //A: reemplazo '#tag' por el mismo '#tag' entre etiquetas <a></a> para convertirlos en links
     const textLinks = this.props.textoCharla.texto.replace(
        /#([A-Za-z0-9_]+)/g, this.creaLink 

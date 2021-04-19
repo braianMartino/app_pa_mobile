@@ -3,6 +3,7 @@ const html = htm.bind(createElement);
 
 import Login from "./components/login.js";
 import Home from "./components/Home/home.js";
+import Juntada from "./components/Juntada/juntada.js";
 
 class App extends React.Component {
   constructor(props) {
@@ -22,6 +23,10 @@ class App extends React.Component {
       {
         content: html`<${Home} usuarioId="${this.state.usuarioId}" />`,
         tab: html`<${Ons.Tab} label="Charlas" icon="md-view-day" />`,
+      },
+      {
+        content: html`<${Juntada} usuarioId="${this.state.usuarioId}" />`,
+        tab: html`<${Ons.Tab} label="Juntadas" icon="md-calendar" />`,
       },
     ];
   }
